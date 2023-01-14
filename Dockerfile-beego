@@ -1,0 +1,19 @@
+# Use the arm32v7/golang:1.17.13 base image
+FROM arm32v7/golang:1.17.13
+
+# Set the working directory to /tmp
+WORKDIR /tmp
+
+# Install the beego and bee packages
+RUN go get github.com/astaxie/beego
+RUN go get github.com/beego/bee
+
+# Install the mgo and jwt-go packages
+RUN go get gopkg.in/mgo.v2/bson
+RUN go get github.com/dgrijalva/jwt-go
+
+# Install the redigo package
+RUN go get github.com/garyburd/redigo/redis
+
+# Set the working directory to /
+WORKDIR /
