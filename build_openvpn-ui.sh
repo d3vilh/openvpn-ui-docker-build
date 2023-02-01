@@ -17,7 +17,7 @@ docker build --platform="arm" -f Dockerfile-beego -t local/beego-v8 -t local/bee
 ./openvpn-ui-pack2.sh
 
 # Build OpenVPN-UI image
-PKGFILE=$OVPN_UI_HOME"openvpn-ui.tar.gz"
+PKGFILE=$OVPN_UI_HOME"/openvpn-ui.tar.gz"
 cp -f $PKGFILE ./
 
 docker build -t local/openvpn-ui .
