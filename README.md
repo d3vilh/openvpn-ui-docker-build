@@ -2,6 +2,12 @@
 Scripts simplifying build of openvpn-ui for ARM32v7
 
 ## To build the image
+As prerequisite, you need to have Docker installed and running:
+```
+sudo apt-get install docker.io -y
+sudo systemctl restart docker
+```
+
  To build own image you need to set local path to [openvpn-ui](https://github.com/d3vilh/openvpn-ui ) sources into OVPN_UI_HOME var in the [build_openvpn-ui.sh](https://github.com/d3vilh/openvpn-ui-docker-build/blob/master/build_openvpn-ui.sh) and [openvpn-ui-pack2.sh](https://github.com/d3vilh/openvpn-ui-docker-build/blob/master/openvpn-ui-pack2.sh) files. For example:
 
 ```
